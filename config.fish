@@ -78,6 +78,8 @@ function fish_prompt -d "Write out the prompt"
 			if [ -n "$git_ahead_of_remote" -a "$git_ahead_of_remote" != "0" ]
 				printf ' +%s' (git_parse_ahead_of_remote)
 			end
+		else
+		 	printf ' %s%s[no branch]' (set_color normal) (set_color blue)
         end
 
 	end
